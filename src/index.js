@@ -3,10 +3,10 @@ import bodyParser from "koa-bodyparser";
 import cors from "koa-cors";
 import { createServer } from "http";
 import mongoose from "mongoose";
-import Router from "./router";
+import router from "./router";
 import { errorHandleMd } from "./middlewares";
+import db from "../models";
 
-Dotenv.config();
 const app = new Koa();
 const server = createServer(app.callback());
 // const db = async () => {
@@ -34,13 +34,11 @@ const main = async () => {
     app.use(cors());
     app.use(bodyParser());
     app.use(errorHandleMd);
-    app.use(Router.routes()).use(Router.allowedMethods());
+    app.use(router.routes()).use(router.allowedMethods());
     // app.use(serve(path.join(__dirname, "../upload")));
     server.listen(3000);
     /* eslint-disable no-alert, no-console */
     console.log("WR server started [port:3000]");
-    await db();
-    await scheduler();
   } catch (e) {
     console.log(e);
   }
