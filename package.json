@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "node src",
-    "start:dev": "nodemon --watch src/ src/index.js"
+    "start:dev": "NODE_PATH=src nodemon --exec babel-node src/index.js"
   },
   "devDependencies": {
     "@babel/core": "^7.17.0",
