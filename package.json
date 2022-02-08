@@ -1,0 +1,23 @@
+{
+  "name": "highing_proto",
+  "version": "1.0.0",
+  "description": "highing prototype",
+  "main": "index.js",
+  "repository": "https://github.com/EomYoosang/highing-proto",
+  "author": "EomYoosang <dbtkd1801@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "koa": "^2.13.4",
+    "koa-body": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-cors": "^0.0.16",
+    "koa-proxy": "^1.0.0-alpha.3",
+    "mongoose": "^6.2.1"
+  },
+  "scripts": {
+    "start": "node src",
+    "start:dev": "nodemon --watch src/ src/index.js"
+  }
+}
