@@ -1,0 +1,20 @@
+@BASE_URL=http://localhost:3000/api/highing
+### 회원가입
+POST {{BASE_URL}}/user
+Content-Type: application/json
+
+{
+    "id": "dbtkd1801",
+	"password": "asdfasdf",
+	"name": "엄유상"
+}
+
+### 로그인
+
+POST {{BASE_URL}}/user/login
+Content-Type: application/json
+
+{
+    "id": "dbtkd1801",
+	"password": "asdfasdf"
+}
