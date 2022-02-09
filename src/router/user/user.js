@@ -2,7 +2,7 @@ import Boom from "@hapi/boom";
 import * as CommonMd from "../middlewares";
 import db from "../../../models";
 import crypto from "crypto";
-import config from "../../../config/config";
+import config from "../../config/config";
 
 export const getDataFromBodyMd = async (ctx, next) => {
   const { id, password, name, sex, birth, phone } = ctx.request.body;

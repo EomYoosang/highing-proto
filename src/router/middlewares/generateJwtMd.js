@@ -1,6 +1,6 @@
 import { Boom } from "@hapi/boom";
 import jwt from "jsonwebtoken";
-import config from "../../../config/config";
+import config from "../../config/config";
 
 const generateJwtMd = async (ctx, next) => {
   const { payload, exp } = ctx.state.payload;
